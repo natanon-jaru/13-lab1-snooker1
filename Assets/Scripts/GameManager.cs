@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    [SerializeField] private int PlaterScore; 
+    [SerializeField] private int PlayerScore; 
     [SerializeField] private GameObject ballPrefab;
     [SerializeField] private GameObject[] ballPositions;
     
@@ -34,7 +34,9 @@ public class GameManager : MonoBehaviour
 
     void SetBalls(BallColors color, int pos)
     {
-        GameObject ball = Instantiate(ballPrefab, ballPositions[pos].transform.position, Quaternion.identity);
+        GameObject ball = Instantiate(ballPrefab,
+                                    ballPositions[pos].transform.position, 
+                                    Quaternion.identity);
         Ball b = ball.GetComponent<Ball>();
         b.SetColorAndPoint(color);
     }
