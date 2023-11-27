@@ -106,6 +106,6 @@ public class GameManager : MonoBehaviour
 
     public void UpdatedScoreText()
     {
-       scoreText.text = scoreText.text+$"{PlayerScore}";
+        scoreText.text = $"Player score: {PlayerScore}";
     }
 }
